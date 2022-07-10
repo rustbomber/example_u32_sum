@@ -1,8 +1,16 @@
-# example_u32_sum
+fn sum(input: &[u32]) -> Option<u32> {
+    let mut count = 0_u64;
+    for item in input {
+        count += *item as u64;
+    }
 
-substrate入门第4课作业 
+    if count > u32::MAX as u64 {
+        return None;
+    }
 
-```rust
+    Some(count as u32)
+}
+
 fn main() {
     let input = &[23, 12, 33];
     let result = sum(input);
@@ -14,5 +22,3 @@ fn main() {
     assert_eq!(result.is_none(), true);
     println!("the sum result is: {:?}", result);
 }
-```
-
