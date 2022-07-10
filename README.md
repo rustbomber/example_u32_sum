@@ -16,3 +16,4 @@ fn main() {
 }
 ```
 
+![](https://github.com/rustbomber/example_u32_sum/blob/3fe1bb10844034994a780a6d7d174d74094c9c69/screen.png)
