@@ -9,6 +9,26 @@ fn sum(input: &[u32]) -> Option<u32> {
     }
 
     Some(count as u32)
+
+
+    // 方式二：
+    // let mut count = 0_u32;
+    // let mut is_overflow =false;
+    // for item in input {
+    //     let a=count.checked_add(*item);
+    //     if let Some(x) = a {
+    //         count= x;
+    //     }else{
+    //         is_overflow= true;
+    //         break;
+    //     }
+    // }
+
+    // if is_overflow{
+    //     None
+    // }else{
+    //     Some(count)
+    // }
 }
 
 fn main() {
